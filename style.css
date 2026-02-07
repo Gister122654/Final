@@ -1,0 +1,209 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #34495e;
+  margin: 20px 0;
+}
+
+/* Layout positioning */
+form {
+  width: 380px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 120px;
+  left: 30px;
+}
+
+/* Form */
+label {
+  font-weight: 600;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Buttons */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+form button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+form .form-actions button {
+  margin-top: 15px;
+}
+
+form .form-actions button + button {
+  margin-top: 8px;
+}
+
+.auth-card .login-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.auth-card .login-options button {
+  margin-top: 0;
+}
+
+/* Divider */
+hr {
+  display: none;
+}
+
+/* Table (Clothes List) */
+table {
+  width: calc(100% - 450px);
+  margin-left: 450px;
+  margin-top: 30px;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Action buttons */
+td button:first-child {
+  background-color: #f39c12;
+}
+
+td button:first-child:hover {
+  background-color: #e67e22;
+}
+
+td button:last-child {
+  background-color: #e74c3c;
+}
+
+td button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Auth pages (Login, Sign Up) */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+  margin: 0;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin: auto;
+}
+
+.auth-card form {
+  width: 100%;
+  max-width: none;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  padding: 0;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+.auth-card h1 {
+  margin-bottom: 5px;
+}
+
+.auth-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.auth-card .auth-switch {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #34495e;
+}
+
+.auth-card .auth-switch a {
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-card .auth-switch a:hover {
+  color: #2980b9;
+}

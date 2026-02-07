@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Clothes Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+    <h1>Clothes Management</h1>
+
+    <!-- Login Form -->
+    <div id="login-section">
+      <h2>Log In</h2>
+      <form id="login-form">
+        <label>
+          Email:
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <br><br>
+
+        <label>
+          Password:
+          <input type="password" name="password" placeholder="Enter your password" required>
+        </label>
+        <br><br>
+
+        <div class="login-options">
+          <button type="submit">Log in as user</button>
+          <button type="button" id="login-as-admin">Log in as admin</button>
+        </div>
+      </form>
+      <p class="auth-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signup-section" style="display: none;">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <label>
+          Full Name:
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+        <br><br>
+
+        <label>
+          Email:
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <br><br>
+
+        <label>
+          Password:
+          <input type="password" name="password" placeholder="Create a password" required minlength="6">
+        </label>
+        <br><br>
+
+        <label>
+          Confirm Password:
+          <input type="password" name="confirmPassword" placeholder="Confirm your password" required minlength="6">
+        </label>
+        <br><br>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="#" id="show-login">Log In</a></p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+    document.getElementById('show-signup').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('signup-section').style.display = 'block';
+    });
+    document.getElementById('show-login').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('signup-section').style.display = 'none';
+      document.getElementById('login-section').style.display = 'block';
+    });
+
+    document.getElementById('login-as-admin').addEventListener('click', function() {
+      window.location.href = 'Manage.html';
+    });
+  </script>
+</body>
+</html>
