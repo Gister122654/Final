@@ -103,11 +103,23 @@ hr {
   display: none;
 }
 
+/* Search box */
+.search-box {
+  margin-left: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 400px;
+}
+
 /* Table (Clothes List) */
 table {
   width: calc(100% - 450px);
   margin-left: 450px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-collapse: collapse;
   background: #ffffff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -129,6 +141,25 @@ th {
 
 tr:hover {
   background-color: #f1f5f9;
+}
+
+/* Image thumbnails in table */
+.img-cell {
+  width: 80px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.clothes-thumb {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.no-img {
+  color: #999;
+  font-size: 12px;
 }
 
 /* Action buttons */
@@ -182,6 +213,13 @@ td button:last-child:hover {
 
 .auth-card h1 {
   margin-bottom: 5px;
+}
+
+.auth-card .auth-message {
+  min-height: 20px;
+  margin: 10px 0;
+  color: #e74c3c;
+  font-size: 14px;
 }
 
 .auth-card h2 {
