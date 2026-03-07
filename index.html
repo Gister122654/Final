@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa hàng quần áo</title>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Clothes Shop</a>
+    <div class="nav-links" id="nav-links">
+      <a href="Auth.html" class="nav-btn">Đăng ký</a>
+      <a href="Auth.html" class="nav-btn nav-btn-primary">Đăng nhập</a>
+    </div>
+  </nav>
+
+  <main class="shop-main">
+    <h1 class="shop-title">Sản phẩm quần áo</h1>
+    <div id="clothes-grid" class="clothes-grid">
+      <!-- Cards rendered by JavaScript -->
+    </div>
+  </main>
+
+  <script>
+    const clothes = JSON.parse(localStorage.getItem('clothes')) || [
+      { id: 1, name: 'T-Shirt', category: 'Shirt', size: 'M', price: 20, quantity: 50, imageUrl: '' },
+      { id: 2, name: 'Jeans', category: 'Pants', size: 'L', price: 40, quantity: 30, imageUrl: '' }
+    ];
+
+    function renderClothes() {
+      const grid = document.getElementById('clothes-grid');
+      grid.innerHTML = clothes.map(c => `
+        <article class="product-card">
+          <div class="product-img">
+            ${c.imageUrl 
+              ? `<img src="${c.imageUrl}" alt="${c.name}" onerror="this.parentNode.innerHTML='<span class=\\'no-img\\'>Chưa có ảnh</span>'" />` 
+              : '<span class="no-img">Chưa có ảnh</span>'}
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">${c.name}</h3>
+            <p class="product-meta">${c.category} | Size ${c.size}</p>
+            <p class="product-price">$${c.price}</p>
+            <p class="product-stock">Còn ${c.quantity} sản phẩm</p>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    renderClothes();
+  </script>
+  <script type="module" src="shop-auth.js"></script>
+</body>
+</html>

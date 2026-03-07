@@ -81,6 +81,7 @@ let clothes = JSON.parse(localStorage.getItem('clothes')) || [
       const size = document.getElementById('clothes-size').value;
       const price = parseFloat(document.getElementById('clothes-price').value) || 0;
       const quantity = parseInt(document.getElementById('clothes-quantity').value) || 1;
+      const imageUrl = document.getElementById('clothes-image').value.trim();
 
       if (editId) {
         const item = clothes.find(c => c.id === parseInt(editId));

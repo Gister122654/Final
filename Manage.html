@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <title>Clothes Management</title>
   <link rel="stylesheet" href="style.css">
-  <script src="manage.js"></script>
 </head>
 <body>
+  <script>
+    if (sessionStorage.getItem("admin") !== "true") {
+      window.location.href = "Auth.html";
+    }
+  </script>
 
+  <nav class="manage-nav">
+    <a href="index.html" class="back-to-shop">← Back to Shop</a>
+  </nav>
   <h1>Clothes Management Page</h1>
 
   <!-- Add Clothes Section -->
@@ -92,7 +99,11 @@
   </table>
 
   <script>
-   
+    document.getElementById("admin-logout").addEventListener("click", () => {
+      sessionStorage.removeItem("admin");
+      window.location.href = "Auth.html";
+    });
   </script>
+  <script src="manage.js"></script>
 </body>
 </html>

@@ -1,0 +1,226 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f0ff 0%, #ede5ff 50%, #e8deff 100%);
+  min-height: 100vh;
+  color: #2d1b4e;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #6b4c9a 0%, #5a3d82 100%);
+  box-shadow: 0 4px 20px rgba(107, 76, 154, 0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.nav-btn-primary {
+  background: #fff;
+  color: #6b4c9a;
+  border-color: #fff;
+}
+
+.nav-btn-primary:hover {
+  background: #f5f0ff;
+  color: #5a3d82;
+}
+
+/* User dropdown (when logged in) */
+.user-dropdown {
+  position: relative;
+}
+
+.user-email-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-email-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(107, 76, 154, 0.2);
+  min-width: 240px;
+  overflow: hidden;
+  z-index: 100;
+  padding: 8px 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.user-dropdown-menu[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.user-dropdown-menu[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-email {
+  padding: 12px 16px;
+  color: #5a3d82;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #ede5ff;
+  word-break: break-all;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  color: #5a3d82;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #ede5ff;
+}
+
+/* Main content */
+.shop-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.shop-title {
+  text-align: center;
+  color: #5a3d82;
+  margin-bottom: 36px;
+  font-size: 2rem;
+}
+
+/* Product grid */
+.clothes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(107, 76, 154, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(107, 76, 154, 0.2);
+}
+
+.product-img {
+  aspect-ratio: 1;
+  background: linear-gradient(180deg, #ede5ff 0%, #e0d4f5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-img .no-img {
+  color: #9b7bc4;
+  font-size: 14px;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  color: #5a3d82;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.product-meta {
+  color: #7d6b9e;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6b4c9a;
+  margin-bottom: 4px;
+}
+
+.product-stock {
+  font-size: 12px;
+  color: #999;
+}

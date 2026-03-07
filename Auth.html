@@ -30,7 +30,10 @@
         </label>
         <br><br>
 
-        <button type="submit">Log In</button>
+        <div class="login-options">
+          <button type="submit">Login as customer</button>
+          <button type="button" onclick="loginAsAdmin(); return false;">Login as admin</button>
+        </div>
       </form>
       <p class="auth-switch">Don't have an account? <a href="#" onclick="showRegister(); return false;">Sign Up</a></p>
     </div>

@@ -10,6 +10,9 @@ import { firebaseConfig } from "./config.js";
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+const ADMIN_EMAIL = "Ltminh7192@gmail.com";
+const ADMIN_PASSWORD = "123456yes";
+
 const getElement = (id) => document.getElementById(id);
 const loginForm = getElement("loginForm");
 const registerForm = getElement("registerForm");
@@ -43,7 +46,25 @@ window.register = async () => {
   }
 };
 
-// Đăng nhập
+// Đăng nhập admin (chỉ tài khoản cố định)
+window.loginAsAdmin = () => {
+  const email = getElement("loginEmail").value.trim();
+  const password = getElement("loginPassword").value;
+
+  if (!email || !password) {
+    showMessage("Vui lòng nhập đầy đủ!");
+    return;
+  }
+
+  if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    sessionStorage.setItem("admin", "true");
+    window.location.href = "Manage.html";
+  } else {
+    showMessage("Chỉ tài khoản admin mới có quyền truy cập!");
+  }
+};
+
+// Đăng nhập khách hàng
 window.login = async () => {
   const email = getElement("loginEmail").value.trim();
   const password = getElement("loginPassword").value;
@@ -72,9 +93,9 @@ window.showLogin = () => {
   loginForm.style.display = "block";
 };
 
-// Kiểm tra nếu đã đăng nhập thì chuyển sang index.html
+// Kiểm tra nếu đã đăng nhập (Firebase) thì chuyển sang index.html (không áp dụng cho admin)
 onAuthStateChanged(auth, (user) => {
-  if (user) {
+  if (user && !sessionStorage.getItem("admin")) {
     window.location.href = "index.html";
   }
 });
