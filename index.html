@@ -25,7 +25,10 @@
   <script>
     const clothes = JSON.parse(localStorage.getItem('clothes')) || [
       { id: 1, name: 'T-Shirt', category: 'Shirt', size: 'M', price: 20, quantity: 50, imageUrl: '' },
-      { id: 2, name: 'Jeans', category: 'Pants', size: 'L', price: 40, quantity: 30, imageUrl: '' }
+      { id: 2, name: 'Jeans', category: 'Pants', size: 'L', price: 40, quantity: 30, imageUrl: '' },
+      { id: 3, name:'Leather jacket',category:'Jacket',size:'L,M',price: 80, quantity:30,imageUrl:'' },
+      { id: 4, name: 'Collar shirt', category:'Shirt',size: 'S', price: 30, quantity:20,imageUrl:''  },
+      {id: 5, name: 'Baggy Jeans', category:'Pants',size:'M',price: 40, quantity:70 , imageUrl:''}
     ];
 
     function renderClothes() {

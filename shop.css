@@ -7,7 +7,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-  background: linear-gradient(135deg, #f5f0ff 0%, #ede5ff 50%, #e8deff 100%);
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
   min-height: 100vh;
   color: #2d1b4e;
 }
@@ -18,8 +18,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-  background: linear-gradient(90deg, #6b4c9a 0%, #5a3d82 100%);
-  box-shadow: 0 4px 20px rgba(107, 76, 154, 0.3);
+  background: linear-gradient(90deg, #1a2d4c 0%, #9dd1f9 100%);
+  box-shadow: 0 4px 20px rgba(65, 46, 95, 0.3);
 }
 
 .logo {
@@ -180,7 +180,7 @@ body {
 
 .product-img {
   aspect-ratio: 1;
-  background: linear-gradient(180deg, #ede5ff 0%, #e0d4f5 100%);
+  background: linear-gradient(180deg, #cfdffe 0%, #faf5ff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
